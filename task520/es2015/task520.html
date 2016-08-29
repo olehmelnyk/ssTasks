@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="file" name="file" id="file">
+    <script>
+        document.getElementById('file').onchange = function(){
+            var file = this.files[0];
+            var reader = new FileReader();
+            reader.onload = function(){
+                var lines = this.result.split('\n');
+                for(var line = 0; line < lines.length; line++){
+                    if(lines[line].length > 60){
+                        console.log(lines[line]);
+                    }
+                }
+            };
+            reader.readAsText(file);
+        };
+    </script>
+</body>
+</html>

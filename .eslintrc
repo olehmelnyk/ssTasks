@@ -1,0 +1,27 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  //"extends": "airbnb",
+  "rules": {
+    // enable additional rules
+    "indent": ["error", 4, { "SwitchCase": 1 }],
+    "semi": ["error", "always"],
+    "strict": ["error", "global"],
+
+    // override default options for rules from base configurations
+    "comma-dangle": ["error", "always"],
+    "no-cond-assign": ["error", "always"],
+
+    // disable rules from base configurations
+    "no-console": "off",
+    "no-unused-expressions": 1,
+    "no-unused-vars": 1,
+    "no-case-declarations": 0
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
+  }
+}
